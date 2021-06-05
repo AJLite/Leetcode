@@ -27,7 +27,7 @@ class Solution {
             //long remMod = (currMod -totalMod) <0? (currMod-totalMod +p) % p : (currMod-totalMod)%p; 
             remMod =  (currMod-totalMod +p) % p ;  //the same 
             
-            //if remMod is repeated .. then we need to smallen the subarray if it an be smaller
+            //if remMod is repeated .. then we need to smallen the subarray if it can be smaller
             if (map.containsKey(remMod)) 
                 res = Math.min(res, i - map.get(remMod).get(map.get(remMod).size() - 1));
             map.computeIfAbsent(currMod, k -> new ArrayList<>());
